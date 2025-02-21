@@ -1,0 +1,315 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Default Light Mode */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* Container */
+.container {
+    max-width: 650px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode for Container */
+.dark-mode .container {
+    background: #2a2a2a;
+    color: white;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #34495e;
+}
+
+/* Table Selection */
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Dark Mode for Select */
+.dark-mode select {
+    background: #444;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Menu Section */
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Dark Mode for Heading */
+.dark-mode h2 {
+    color: #ecf0f1;
+}
+
+/* Menu Items */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    background: rgba(236, 240, 241, 0.6);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+/* Dark Mode for Menu */
+.dark-mode .menu-item {
+    background: rgba(50, 50, 50, 0.6);
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    background: rgba(236, 240, 241, 0.9);
+}
+
+.menu-item label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.menu-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #2ecc71;
+}
+
+/* Order Button */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.btn-success {
+    background: #27ae60;
+}
+
+.btn-success:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+/* Order Confirmation Animation */
+.order-confirmation {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2ecc71;
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Dark Mode for Order Confirmation */
+.dark-mode .order-confirmation {
+    color: #2ecc71;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .menu-item label {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #232526, #414345);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin Login Container */
+#login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#login-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#login-container p {
+    color: red;
+}
+
+/* Admin Panel */
+#adminPanel {
+    display: none;
+    padding: 20px;
+}
+
+.logout-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Order Table */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #555;
+}
+
+/* Buttons */
+.btn-complete {
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: black;
+    color: white;
+}
+
