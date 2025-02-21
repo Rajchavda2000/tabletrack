@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Orders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="login-container">
+        <h2>Admin Login</h2>
+        <input type="text" id="adminUsername" placeholder="Enter Username">
+        <input type="password" id="adminPassword" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <p id="loginError"></p>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+        <h1>Admin Panel</h1>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+        
+        <h2>Orders</h2>
+        <table id="ordersTable">
+            <tr>
+                <th>Table No.</th>
+                <th>Items</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
